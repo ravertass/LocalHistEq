@@ -1,11 +1,15 @@
 loadedImage = load('forest.mat');
 image = loadedImage.forestgray;
 
-imshow(image);
+%imshow(image);
 
-globallyEqualizedImage = histeq(image);
-figure, imshow(globallyEqualizedImage);
+%globallyEqualizedImage = histeq(image);
+%figure, imshow(globallyEqualizedImage);
 
 boxSideSize = 51;
-locallyEqualizedImage = LocalHistEq(image, boxSideSize, 'optimized');
-figure, imshow(locallyEqualizedImage);
+%locallyEqualizedImage = LocalHistEq(image, boxSideSize, 'optimized');
+%figure, imshow(locallyEqualizedImage);
+
+meanImage = Mean(image, boxSideSize);
+figure, imshow(meanImage)
+title('piss')
