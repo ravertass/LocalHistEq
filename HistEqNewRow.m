@@ -6,7 +6,6 @@ function [ equalizedPixel, intensityFrequencies ] = HistEqNewRow( inputImage )
   
   intensityFrequencies = zeros(maxIntensity + 1, 1);
   
-  % TODO: One should be able to skip the padding left of the center pixel
   for j = 1:y
     for i = 1:x
       intensity = round(inputImage(i, j) * maxIntensity);
